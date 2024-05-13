@@ -1,50 +1,46 @@
 # Zed
 
-[![CI](https://github.com/zed-industries/zed/actions/workflows/ci.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/ci.yml)
+Zed的Windows版本，编译方法在https://github.com/zed-industries/zed/blob/main/docs/src/development/windows.md
 
-Welcome to Zed, a high-performance, multiplayer code editor from the creators of [Atom](https://github.com/atom/atom) and [Tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-## Installation
+我的编译环境（My compilation environment）：
 
-You can [download](https://zed.dev/download) Zed today for macOS (v10.15+).
+计算机：
+```txt
+rustc 1.78.0 (9b00956e5 2024-04-29)
 
-Support for additional platforms is on our [roadmap](https://zed.dev/roadmap):
+cargo 1.78.0 (54d8815d0 2024-03-26)
 
-- Linux ([tracking issue](https://github.com/zed-industries/zed/issues/7015))
-- Windows ([tracking issue](https://github.com/zed-industries/zed/issues/5394))
-- Web ([tracking issue](https://github.com/zed-industries/zed/issues/5396))
+处理器 12th Gen Intel(R) Core(TM) i9-12900H 2.50 GHz
 
-For macOS users, you can also install Zed using [Homebrew](https://brew.sh/):
+机带 RAM 32.0 GB (31.7 GB 可用)
 
-```sh
-brew install --cask zed
+系统类型 64 位操作系统, 基于 x64 的处理器
+
+版本 Windows 11 专业版
+
+版本 23H2
+
+操作系统版本 22631.3527
+
+体验 Windows Feature Experience Pack 1000.22700.1003.0
 ```
 
-Alternatively, to install the Preview release:
+IDE：
+```txt
+RustRover 2024.1 EAP
 
-```sh
-brew install --cask zed@preview
+Build #RR-241.15989.180, built on May 6, 2024
+
+Runtime version: 17.0.10+1-b1207.14 amd64
+
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
+
+Windows 11.0
+
+GC: G1 Young Generation, G1 Old Generation
+
+Memory: 2048M
+
+Cores: 20
 ```
-
-## Developing Zed
-
-- [Building Zed for macOS](./docs/src/development/macos.md)
-- [Building Zed for Linux](./docs/src/development/linux.md)
-- [Building Zed for Windows](./docs/src/development/windows.md)
-- [Running Collaboration Locally](./docs/src/development/local-collaboration.md)
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways you can contribute to Zed.
-
-Also... we're hiring! Check out our [jobs](https://zed.dev/jobs) page for open roles.
-
-## Licensing
-
-License information for third party dependencies must be correctly provided for CI to pass.
-
-We use [`cargo-about`](https://github.com/EmbarkStudios/cargo-about) to automatically comply with open source licenses. If CI is failing, check the following:
-
-- Is it showing a `no license specified` error for a crate you've created? If so, add `publish = false` under `[package]` in your crate's Cargo.toml.
-- Is the error `failed to satisfy license requirements` for a dependency? If so, first determine what license the project has and whether this system is sufficient to comply with this license's requirements. If you're unsure, ask a lawyer. Once you've verified that this system is acceptable add the license's SPDX identifier to the `accepted` array in `script/licenses/zed-licenses.toml`.
-- Is `cargo-about` unable to find the license for a dependency? If so, add a clarification field at the end of `script/licenses/zed-licenses.toml`, as specified in the [cargo-about book](https://embarkstudios.github.io/cargo-about/cli/generate/config.html#crate-configuration).
